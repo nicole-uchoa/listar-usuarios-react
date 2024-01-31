@@ -1,0 +1,41 @@
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(212, 214, 214);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+
+    list-style: none;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+.add-user{
+    margin-left: 20px;
+}

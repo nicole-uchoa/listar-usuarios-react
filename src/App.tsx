@@ -1,51 +1,39 @@
-import { useState } from 'react';
-import './App.css'
-import { List } from './components/list/list';
-import { useUsersData } from './hooks/useUsersDataGet';
-import { CreateModal } from './components/create-modal/create-modal';
+// import './App.css'
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+
+import TelaListar from './components/telas/tela-listar';
+import TelaAdicinar from './components/telas/tela-adicionar';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+function NavBar() {
+  return (
+    <div class="card position-relative">
+      <div class="card-header">Menu</div>
+      <div class="card-body">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><Link to="/listar" >Listar Usuário </Link></li>
+          <li class="breadcrumb-item"><Link to="/adicionar" >Adicionar Usuário</Link></li>
+        </ol>
+      </div>
+    </div>
+  );
+}
 
 function App() {
   // guardar os dados da api 
-  const [filtro, setFiltro] = useState('');
-  const { data } = useUsersData(filtro);
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
-  const handleOpenModal = () => {
-    setIsModalOpen(prev => !prev)
-  }
-
-  const handleLimparFiltro = () => {
-    setFiltro('');
-  };
-
   return (
     <div className='container'>
-      <h1>Usuários</h1>
-
-      <div>
-        <input
-          type='text'
-          placeholder='Filtrar por nome'
-          value={filtro}
-          onChange={(e) => setFiltro(e.target.value)}
-        />
-        <button onClick={handleLimparFiltro}>Limpar Filtro</button>
-      </div>
-
-      <div className='lista'>
-        {data?.map((userData) => (
-          <List key={userData.id} name={userData.name} />
-        ))}
-      </div>
-
-      {/* <div className='lista'>
-        {data?.map(userData => <List name={userData.name} />)} 
-      </div> */}
-      {isModalOpen && <CreateModal closeModal={handleOpenModal}/>}
-      <button onClick={handleOpenModal}>Cadastrar novo usuário</button>
-      
+      <Router>
+        <div>
+          <Routes>
+            <Route path="/" element={<NavBar />} />
+            <Route path="/listar" Component={TelaListar} />
+            <Route path="/adicionar" Component={TelaAdicinar} />
+          </Routes>
+        </div>
+      </Router >
     </div>
-
   )
 }
 

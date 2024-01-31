@@ -1,14 +1,12 @@
-import './list.css'
-
 interface ListProps {
     name: string
 }
 
 export function List({ name }: ListProps){
     return(
-        <div className="lista">
-            <ul>
-                <li>{name}</li>
+        <div >
+            <ul class="list-group">
+                <li class="list-group-item w-25 p-3 border-top-0 border-right-0 border-left-0">{name}</li>
             </ul>
         </div>
     )
