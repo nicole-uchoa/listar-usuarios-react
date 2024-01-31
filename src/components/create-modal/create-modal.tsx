@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useUsersDataMutate } from "../../hooks/useUserDataPost";
 import { UserData } from "../../interface/userData";
-
+import "./modal.css"
 interface InputProps {
     label: string,
     value: string,
@@ -36,7 +36,7 @@ export function CreateModal( {closeModal}: ModalProps ){
         closeModal()
     }, [isSuccess])
     return(
-        <div className="modal-overflow">
+        <div className="modal-overlay">
             <div className="modal-body">
                 <h2>Cadastre novo usuário</h2>
                 <form className="input-forms">

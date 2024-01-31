@@ -1,4 +1,4 @@
-import './list.css'
+// import './list.css'
 
 interface ListProps {
     name: string

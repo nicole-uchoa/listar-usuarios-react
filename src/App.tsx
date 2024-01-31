@@ -22,8 +22,9 @@ function App() {
     <div className='container'>
       <h1>Usuários</h1>
 
-      <div>
+      <div className='filtragem'>
         <input
+          className='input'
           type='text'
           placeholder='Filtrar por nome'
           value={filtro}
