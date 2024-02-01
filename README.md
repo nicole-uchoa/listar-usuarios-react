@@ -1,30 +1,36 @@
-# React + TypeScript + Vite
+# Listar e adicionar usuário - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto simples desenvolvido em ReactJS + TypeScript + Vite
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Requisitos
+- NodeJS 21
+- NPM
 
-## Expanding the ESLint configuration
+## Clonando o repositório 
+Primeiro você deve clonar o repositório 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+git clone https://github.com/nicole-uchoa/listar-usuarios-react
+cd listar-usuarios-react
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Executar aplicação 
+Primeiro você deve instalar as dependências do projeto 
+```bash
+npm install
+```
+Para executar a aplicação 
+```bash
+npm run dev
+```
+Agora entre no localhost indicado
+
+Para integralização com o backend vá para o repositório [listar-usuarios-java-spring
+](https://github.com/nicole-uchoa/listar-usuarios-java-spring) 
+
+
+## Links úteis 
+[Vite - documentação](https://pt.vitejs.dev/)
+
+[NodeJS](https://nodejs.org/en)
