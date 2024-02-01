@@ -13,7 +13,7 @@ const Input = ({ label, value, updateValue }: InputProps) => {
     return (
         <>
             <label>{label}</label>
-            <input class="form-control"  value={value} onChange={event => updateValue(event.target.value)}></input>
+            <input className="form-control"  value={value} onChange={event => updateValue(event.target.value)}></input>
         </>
     )
 }
@@ -32,11 +32,11 @@ export function CreateForm() {
             <div className="modal-body">
                 <h2>Cadastre um novo usuário</h2>
                 <form>
-                    <div class="form-group">
+                    <div className="form-group">
                         <Input label="Inserir novo usuário" value={name} updateValue={setName} />
                     </div>
-                    <button  onClick={submit} class="btn btn-secondary">Adicionar</button>
-                    <a href='/' class="btn btn-secondary">Página principal</a>
+                    <button  onClick={submit} className="btn btn-secondary">Adicionar</button>
+                    <a href='/' className="btn btn-secondary">Página principal</a>
                 </form>
             </div>
 

@@ -32,7 +32,7 @@ export function TelaListar() {
       </div>
 
       <div>
-        <a href='/' class="btn btn-secondary">Página principal</a>
+        <a href='/' className="btn btn-secondary">Página principal</a>
       </div>
     </div>
   );

@@ -8,12 +8,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function NavBar() {
   return (
-    <div class="card position-relative">
-      <div class="card-header">Menu</div>
-      <div class="card-body">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><Link to="/listar" >Listar Usuário </Link></li>
-          <li class="breadcrumb-item"><Link to="/adicionar" >Adicionar Usuário</Link></li>
+    <div className="card position-relative">
+      <div className="card-header">Menu</div>
+      <div className="card-body">
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item"><Link to="/listar" >Listar Usuário </Link></li>
+          <li className="breadcrumb-item"><Link to="/adicionar" >Adicionar Usuário</Link></li>
         </ol>
       </div>
     </div>
